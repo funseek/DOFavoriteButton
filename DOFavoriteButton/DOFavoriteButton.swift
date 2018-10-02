@@ -338,11 +338,11 @@ open class DOFavoriteButton: UIButton {
         //===============
         // add target
         //===============
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchDown(_:)), for: UIControlEvents.touchDown)
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchUpInside(_:)), for: UIControlEvents.touchUpInside)
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchDragExit(_:)), for: UIControlEvents.touchDragExit)
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchDragEnter(_:)), for: UIControlEvents.touchDragEnter)
-        self.addTarget(self, action: #selector(DOFavoriteButton.touchCancel(_:)), for: UIControlEvents.touchCancel)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchDown(_:)), for: UIControl.Event.touchDown)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchUpInside(_:)), for: UIControl.Event.touchUpInside)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchDragExit(_:)), for: UIControl.Event.touchDragExit)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchDragEnter(_:)), for: UIControl.Event.touchDragEnter)
+        self.addTarget(self, action: #selector(DOFavoriteButton.touchCancel(_:)), for: UIControl.Event.touchCancel)
     }
 
     @objc func touchDown(_ sender: DOFavoriteButton) {
